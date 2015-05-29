@@ -6,11 +6,11 @@ C:\Users\Gago\Desktop\HW Projects\Games\TestName\TestName\obj\Debug\TestName.exe
 C:\Users\Gago\Desktop\HW Projects\Games\TestName\TestName\obj\Debug\TestName.pdb
 C:\Users\Gago\Desktop\HW Projects\Games\TestName\TestName\bin\Debug\OpenTK.dll
 C:\Users\Gago\Desktop\HW Projects\Games\TestName\TestName\bin\Debug\OpenTK.xml
-C:\Users\Arigato\Documents\GitHub\TestName\TestName\bin\Debug\TestName.exe.config
-C:\Users\Arigato\Documents\GitHub\TestName\TestName\obj\Debug\TestName.exe
-C:\Users\Arigato\Documents\GitHub\TestName\TestName\obj\Debug\TestName.pdb
-C:\Users\Arigato\Documents\GitHub\TestName\TestName\bin\Debug\TestName.exe
-C:\Users\Arigato\Documents\GitHub\TestName\TestName\bin\Debug\TestName.pdb
-C:\Users\Arigato\Documents\GitHub\TestName\TestName\bin\Debug\OpenTK.dll
-C:\Users\Arigato\Documents\GitHub\TestName\TestName\bin\Debug\OpenTK.xml
-C:\Users\Arigato\Documents\GitHub\TestName\TestName\obj\Debug\TestName.csprojResolveAssemblyReference.cache
+C:\Users\AtrumDelorox\Documents\GitHub\TestName\TestName\bin\Debug\TestName.exe.config
+C:\Users\AtrumDelorox\Documents\GitHub\TestName\TestName\bin\Debug\TestName.exe
+C:\Users\AtrumDelorox\Documents\GitHub\TestName\TestName\bin\Debug\TestName.pdb
+C:\Users\AtrumDelorox\Documents\GitHub\TestName\TestName\bin\Debug\OpenTK.dll
+C:\Users\AtrumDelorox\Documents\GitHub\TestName\TestName\bin\Debug\OpenTK.xml
+C:\Users\AtrumDelorox\Documents\GitHub\TestName\TestName\obj\Debug\TestName.csprojResolveAssemblyReference.cache
+C:\Users\AtrumDelorox\Documents\GitHub\TestName\TestName\obj\Debug\TestName.exe
+C:\Users\AtrumDelorox\Documents\GitHub\TestName\TestName\obj\Debug\TestName.pdb
