@@ -10,58 +10,47 @@ namespace TestName
     class Minions
     {
 //Variables
-        protected int attackDamage;
-        protected float attackSpeed;
-        protected int minionHealth;
-        protected float moveSpeed;
-        protected float minionVelocity;
-        protected string minionName;
+        int attackDamage;
+        float attackSpeed;
+        int minionHealth;
+        float moveSpeed;
+        float minionVelocity;
         public Vector2 position;
+        //Minion list
+        static ArrayList minions = new ArrayList();
 //Functions        
         //Default minion stats
         public Minions()
         {
-            minionName = setMinionName().ToString();
             attackDamage = 5;
             attackSpeed = 1;
             minionHealth = 100;
             moveSpeed = 2;
             minionVelocity = 1;
-            position.X = 0;
-            position.Y = 0;
         }
         //Custom minion stats
-        public Minions(Vector2 Position)
+        public Minions(int atkDamage, float atkSpeed, int minHealth, float mvSpeed, float minVelocity)
         {
-            minionName = setMinionName().ToString();
-            attackDamage = 5;
-            attackSpeed = 1;
-            minionHealth = 100;
-            moveSpeed = 2;
-            minionVelocity = 1;
-            position = Position;
-        }
-        public Minions(string name, int atkDamage, float atkSpeed, int minHealth, float mvSpeed, float minVelocity, int xPosition, int yPosition)
-        {
-            minionName = name;
             attackDamage = atkDamage;
             attackSpeed = atkSpeed;
             minionHealth = minHealth;
             moveSpeed = mvSpeed;
             minionVelocity = minVelocity;
-            position.X = xPosition;
-            position.Y = yPosition;
         }
         //Swapen generic named minion
-        public static char setMinionName()
+        public static void spawnMinion()
         {
             char i = 'A';
+            minions.Add(i);
             i++;
             if (i == '[')
                 i = 'a';
             if (i == 'z')
                 i = 'A';
-            return i;
+        }
+        public ArrayList sendMinionData()
+        {
+            return minions;
         }
         public Vector2 MiniontPosition
         {
@@ -73,31 +62,6 @@ namespace TestName
             {
                 position = value;
             }
-        }
-//Get functions
-        public float getAttackSpeed() 
-        {
-            return attackSpeed;
-        }
-        public float getMinionVelocity()
-        {
-            return minionVelocity;
-        }
-        public float getMoveSpeed()
-        {
-            return moveSpeed;
-        }
-        public int getAttackDamage()
-        {
-            return attackDamage;
-        }
-        public int getMinionHealth()
-        {
-            return minionHealth;
-        }
-        public string getMinionName()
-        {
-            return minionName;
         }
         void Draw()
         {

@@ -10,22 +10,38 @@ namespace TestName
     class Tower_Controller
     {
         
-        public void target()
+        public double targetInRange(Minions Minion)
         {
-            //get enemy position
+            Tower tower = new Tower();
+            Minions myMinion = new Minions();
+            double distance = Math.Sqrt(tower.position.X - myMinion.position.X) + (tower.position.Y - myMinion.position.Y);
+            
+            return distance;
         }
-        public void attack()
+        
+        public float CalculateDamage(Minions Minion, Tower tower)
         {
+            Tower myTower = new Tower();
+            Minions myMinion = new Minions();
             //damage selected enemy
+            if (targetInRange(Minion) < 1)
+            {
+                float damage = myMinion.getMinionHealth - myTower.power;
+                return damage;
+            }           
         }
+        
         public void addTower()
         {
-            //building new towers?
+            Tower tower = new Tower();
         }
 
-        public void destroyTower()
+        
+        public void destroyTower(Tower tower)
+
         {
             //Delete selected tower
+            
         }
         public Tower_Controller(){
 
