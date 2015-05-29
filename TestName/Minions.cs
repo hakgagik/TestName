@@ -17,7 +17,7 @@ namespace TestName
         protected float minionVelocity;
         protected string minionName;
         public Vector2 position;
-        //Functions        
+//Functions        
         //Default minion stats
         public Minions()
         {
@@ -74,7 +74,7 @@ namespace TestName
                 position = value;
             }
         }
-        //Get functions
+//Get functions
         public float getAttackSpeed()
         {
             return attackSpeed;
