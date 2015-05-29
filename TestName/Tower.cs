@@ -10,29 +10,30 @@ namespace TestName
     {
         //Name of tower
         String name;
-
         //damage
-        float power;
-        
+        float power;        
         //Rate of attack
         float attackSpeed;
-
         static ArrayList towers = new ArrayList();
 
-        public TowerA(){
+        public Tower(){
             name = "Laser";
             power = 2000;
             attackSpeed = 1;
-
         }
-        public static void addTower(){
+
+        public Tower(String towerName, float towerPower, float towerAttackSpeed){
+            name = towerName;
+            power = towerPower;
+            attackSpeed = towerAttackSpeed;
+        }
+        /*public static void addTower(){
             char i = 'A';
             towers.addTower();
             i++;
         }
-
-
-    }
+        */
+      }
        
-    }
 }
+
