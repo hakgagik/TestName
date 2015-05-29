@@ -1,0 +1,8 @@
+C:\Users\Gago\Desktop\HW Projects\Games\TestName\TestName\bin\Debug\TestName.exe.config
+C:\Users\Gago\Desktop\HW Projects\Games\TestName\TestName\bin\Debug\TestName.exe
+C:\Users\Gago\Desktop\HW Projects\Games\TestName\TestName\bin\Debug\TestName.pdb
+C:\Users\Gago\Desktop\HW Projects\Games\TestName\TestName\obj\Debug\TestName.csprojResolveAssemblyReference.cache
+C:\Users\Gago\Desktop\HW Projects\Games\TestName\TestName\obj\Debug\TestName.exe
+C:\Users\Gago\Desktop\HW Projects\Games\TestName\TestName\obj\Debug\TestName.pdb
+C:\Users\Gago\Desktop\HW Projects\Games\TestName\TestName\bin\Debug\OpenTK.dll
+C:\Users\Gago\Desktop\HW Projects\Games\TestName\TestName\bin\Debug\OpenTK.xml
