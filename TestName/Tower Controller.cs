@@ -22,11 +22,7 @@ namespace TestName
         {
             //building new towers?
         }
-        public Vector2 getPosition
-        {
-            
-            
-        }
+
         public void destroyTower()
         {
             //Delete selected tower

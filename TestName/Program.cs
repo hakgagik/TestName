@@ -12,7 +12,7 @@ namespace TestName
         [STAThread]
         public static void Main()
         {
-            GameMode game = new GameMode();
+            GameMode game = new GameMode(1280, 720);
             game.Run();
         }
     }
