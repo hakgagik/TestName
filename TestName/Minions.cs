@@ -37,7 +37,7 @@ namespace TestName
             moveSpeed = mvSpeed;
             minionVelocity = minVelocity;
         }
-        //Swapen generic named minion
+        //Spawn generic named minion
         public static void spawnMinion()
         {
             char i = 'A';
