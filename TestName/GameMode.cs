@@ -19,11 +19,16 @@ namespace TestName
         private Environment environment;
 
         // Main towerController
+        private Tower_Controller towerController;
         
         // Main minionController
+        private MinionController minionController;
 
         // Main canvas object. This is currently the game's only main View.
         private Canvas canvas;
+
+        // Current state of the game
+        private GameState state;
 
         public GameMode() : base()
         {
@@ -46,6 +51,9 @@ namespace TestName
             VSync = VSyncMode.On;
             // TODO: Loading code here
             gameplayController = new GameplayController();
+            minionController = new MinionController();
+            towerController = new Tower_Controller();
+            canvas = new Canvas(Width, Height);
         }
 
         private void OnResize(object e, EventArgs sender)
@@ -62,7 +70,15 @@ namespace TestName
             }
 
             // TODO: All game logic goes here
-            gameplayController.Update();
+            switch (state)
+            {
+                    case GameState.Intro:
+                    break;
+                    case GameState.Play:
+                    break;
+                    case GameState.GameOver:
+                    break;
+            }
         }
 
         private void OnRenderFrame(object e, EventArgs sender)
@@ -77,6 +93,13 @@ namespace TestName
 
 
             SwapBuffers();
+        }
+
+        public enum GameState
+        {
+            Intro,
+            Play,
+            GameOver
         }
     }
 }

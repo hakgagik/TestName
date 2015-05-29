@@ -8,7 +8,7 @@ namespace TestName
 {
     class Environment
     {
-        public void Draw()
+        public void Draw(Canvas canvas)
         {
             
         }
