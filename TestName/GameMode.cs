@@ -106,6 +106,8 @@ namespace TestName
                     // TODO: initialization code here
                     break;
                 case GameState.Play:
+                    towerController.update();
+                    // minionController.update();
                     gameplayController.Update();
                     break;
                 case GameState.GameOver:
@@ -126,7 +128,8 @@ namespace TestName
                     break;
                 case GameState.Play:
                     environment.Draw(canvas);
-                    canvas.DrawSqaure(squarePosition.X, squarePosition.Y, 0.25f, Color.BlueViolet);
+                    towerController.draw();
+                    minionController.draw();
                     break;
                 case GameState.GameOver:
                     break;
