@@ -44,11 +44,12 @@ Temporary Items
 
 
 # Solution files
-*.suo
 *.exe
 *.pdb
+*.sou
 *.v12.sou
-.sou
-.exe
-.pdb
-.v12.sou
+TestName\obj\Debug
+*.pdb
+*.exe
+*.pdb
+TestName/obj/Debug/TestName.exe

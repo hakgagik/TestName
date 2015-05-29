@@ -10,7 +10,6 @@ namespace TestName
     {
         public void Update()
         {
-            
         }
     }
 }
