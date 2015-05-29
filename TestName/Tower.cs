@@ -24,6 +24,7 @@ namespace TestName
         static ArrayList towers = new ArrayList();
 
         public Tower(){
+            HP = 100;
             name = "Laser";
             power = 2000;
             attackSpeed = 1;
@@ -38,11 +39,11 @@ namespace TestName
             power = towerPower;
             attackSpeed = towerAttackSpeed;
         }
-        /*public static void addTower(){
-            char i = 'A';
-            towers.addTower();
-            i++;
-        }*/
+        public float getPower()
+        {
+            return power;
+        }
+        
         
       }
        
