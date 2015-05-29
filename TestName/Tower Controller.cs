@@ -35,8 +35,10 @@ namespace TestName
         {
             Tower tower = new Tower();
         }
+
         
         public void destroyTower(Tower tower)
+
         {
             //Delete selected tower
             
