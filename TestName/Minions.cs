@@ -16,12 +16,12 @@ namespace TestName
         protected float moveSpeed;
         protected float minionVelocity;
         protected string minionName;
-        public Vector2 position;
+        protected Vector2 position;
 //Functions        
         //Default minion stats
         public Minions()
         {
-            minionName = setMinionName().ToString();
+            minionName = GetMinionName.ToString();
             attackDamage = 5;
             attackSpeed = 1;
             minionHealth = 100;
@@ -33,7 +33,7 @@ namespace TestName
         //Custom minion stats
         public Minions(Vector2 Position)
         {
-            minionName = setMinionName().ToString();
+            minionName = GetMinionName.ToString();
             attackDamage = 5;
             attackSpeed = 1;
             minionHealth = 100;
@@ -51,57 +51,54 @@ namespace TestName
             minionVelocity = minVelocity;
             position.X = xPosition;
             position.Y = yPosition;
-        }
-        //Spawn generic named minion
-        public static char setMinionName()
+        }        
+//Get functions
+        public float GetAttackSpeed
         {
-            char i = 'A';
-            i++;
-            if (i == '[')
-                i = 'a';
-            if (i == 'z')
-                i = 'A';
-            return i;
+            get { return attackSpeed; }
+            set { attackSpeed = value; }
         }
-        public Vector2 MiniontPosition
+        public float GetMinionVelocity
         {
-            get { return position; }
+            get { return minionVelocity; }
+            set { minionVelocity = value; }
         }
-        public Vector2 setMinionPosition
+        public float GetMoveSpeed
         {
-            set
+            get { return moveSpeed; }
+            set { moveSpeed = value; }
+        }
+        public int GetAttackDamage
+        {
+            get { return attackDamage; }
+            set { attackDamage = value; }
+        }
+        public int getMinionHealth
+        {
+            get { return minionHealth; }
+            set { minionHealth = value; }
+        }
+        public string GetMinionName
+        {
+            get { return minionName; }
+            static set
             {
-                position = value;
+                char i = 'A';
+                i++;
+                if (i == '[')
+                    i = 'a';
+                if (i == 'z')
+                    i = 'A';
             }
         }
-//Get functions
-        public float getAttackSpeed()
+        public Vector2 MinionPosition
         {
-            return attackSpeed;
+            get { return position; }
+            set { position = value; }
         }
-        public float getMinionVelocity()
+        void Draw(Canvas canvas)
         {
-            return minionVelocity;
-        }
-        public float getMoveSpeed()
-        {
-            return moveSpeed;
-        }
-        public int getAttackDamage()
-        {
-            return attackDamage;
-        }
-        public int getMinionHealth()
-        {
-            return minionHealth;
-        }
-        public string getMinionName()
-        {
-            return minionName;
-        }
-        void Draw()
-        {
-
+            
         }
     }
 }

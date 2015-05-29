@@ -1,6 +1,7 @@
 ﻿using OpenTK;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,13 +11,6 @@ namespace TestName
     class MinionController
     {
         protected static Minions[] basicBaddies;
-        public Vector2 moveTo
-        {
-            set
-            {
-                Vector2 position = value;
-            }
-        }
         public Minions[] getMinionData()
         {
             return basicBaddies;
@@ -35,13 +29,14 @@ namespace TestName
         {
             //stuff
         }
-        void Update() 
+        public void Update() 
         {
 
         }
-        void Draw() 
+        public void Draw(Canvas canvas) 
         {
-
+            for (int i = 0; i < basicBaddies.Length; i++)
+                canvas.DrawCircle(basicBaddies[i].MinionPosition.X, basicBaddies[i].MinionPosition.Y, .05f, Color.Green);
         }
     }
 }
