@@ -129,7 +129,7 @@ namespace TestName
                 case GameState.Play:
                     environment.Draw(canvas);
                     towerController.draw();
-                    minionController.draw();
+                    //minionController.draw();
                     break;
                 case GameState.GameOver:
                     break;
