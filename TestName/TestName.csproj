@@ -49,8 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="MinionController.cs" />
     <Compile Include="Minions.cs" />
+=======
+    <Compile Include="GameMode.cs" />
+>>>>>>> 25a8655b00ca4ed1724da120c04397817c51faee
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
