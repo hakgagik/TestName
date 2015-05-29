@@ -108,7 +108,7 @@ namespace TestName
                 case GameState.Play:
                     towerController.update();
                     // minionController.update();
-                    gameplayController.Update();
+                    //gameplayController.Update();
                     break;
                 case GameState.GameOver:
                     break;
