@@ -3,23 +3,34 @@ using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OpenTK;
 
 namespace TestName
 {
     class Tower
     {
+        //Health Points of tower
+        public int HP;
         //Name of tower
         String name;
         //damage
-        float power;        
+        public float power;        
         //Rate of attack
-        float attackSpeed;
+        public float attackSpeed;
+        //Range
+        public float range;
+        
+        public Vector2 position;
         static ArrayList towers = new ArrayList();
 
         public Tower(){
             name = "Laser";
             power = 2000;
             attackSpeed = 1;
+            position.X = 0;
+            position.Y = 0;
+            range = 1;
+
         }
 
         public Tower(String towerName, float towerPower, float towerAttackSpeed){
@@ -31,8 +42,8 @@ namespace TestName
             char i = 'A';
             towers.addTower();
             i++;
-        }
-        */
+        }*/
+        
       }
        
 }

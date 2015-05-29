@@ -15,7 +15,7 @@ namespace TestName
         int minionHealth;
         float moveSpeed;
         float minionVelocity;
-        Vector2 position;
+        public Vector2 position;
         //Minion list
         static ArrayList minions = new ArrayList();
 //Functions        
