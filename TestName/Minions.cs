@@ -1,6 +1,6 @@
-﻿using System;
+﻿using OpenTK;
+using System;
 using System.Collections;
-//using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,18 +9,17 @@ namespace TestName
 {
     class Minions
     {
-        //attack damage
+//Variables
         int attackDamage;
-        //attack speed
         float attackSpeed;
-        //health
         int minionHealth;
-        //move speed
         float moveSpeed;
-        //velocity
         float minionVelocity;
-        //Minions
+        Vector2 position;
+        //Minion list
         static ArrayList minions = new ArrayList();
+//Functions        
+        //Default minion stats
         public Minions()
         {
             attackDamage = 5;
@@ -29,6 +28,16 @@ namespace TestName
             moveSpeed = 2;
             minionVelocity = 1;
         }
+        //Custom minion stats
+        public Minions(int atkDamage, float atkSpeed, int minHealth, float mvSpeed, float minVelocity)
+        {
+            attackDamage = atkDamage;
+            attackSpeed = atkSpeed;
+            minionHealth = minHealth;
+            moveSpeed = mvSpeed;
+            minionVelocity = minVelocity;
+        }
+        //Swapen generic named minion
         public static void spawnMinion()
         {
             char i = 'A';
@@ -36,10 +45,27 @@ namespace TestName
             i++;
             if (i == '[')
                 i = 'a';
+            if (i == 'z')
+                i = 'A';
         }
         public ArrayList sendMinionData()
         {
             return minions;
+        }
+        public Vector2 MiniontPosition
+        {
+            get { return position; }
+        }
+        public Vector2 setMinionPosition
+        {
+            set
+            {
+                position = value;
+            }
+        }
+        void Draw()
+        {
+
         }
     }
 }

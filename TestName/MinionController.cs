@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenTK;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,14 +13,6 @@ namespace TestName
         {
 
         }
-        public void geMiniontPosition()
-        {
-            //call function
-        }
-        public void setMinionPosition()
-        {
-
-        }
         public void setMinionSpawnPosition() 
         {
             //call outside function
@@ -28,7 +21,17 @@ namespace TestName
         {
 
         }
-        update();
-        draw();
+        public MinionController()
+        {
+            //stuff
+        }
+        void Update() 
+        {
+
+        }
+        void Draw() 
+        {
+
+        }
     }
 }
