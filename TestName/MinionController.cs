@@ -9,15 +9,25 @@ namespace TestName
 {
     class MinionController
     {
-        public void moveTo()
+        protected static Minions[] basicBaddies;
+        public Vector2 moveTo
         {
-
+            set
+            {
+                Vector2 position = value;
+            }
         }
-        public void setMinionSpawnPosition() 
+        public Minions[] getMinionData()
         {
-            //call outside function
+            return basicBaddies;
         }
-        public void  takeDamage() 
+        public static void spawnMinion(Vector2 position)
+        {
+            int i = 0;
+            basicBaddies[i] = new Minions(position);
+            i++;
+        }
+        public void takeDamage() 
         {
 
         }
