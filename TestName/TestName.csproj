@@ -49,6 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Canvas.cs" />
+    <Compile Include="Environment.cs" />
+    <Compile Include="GameMode.cs" />
+    <Compile Include="GameplayController.cs" />
     <Compile Include="MinionController.cs" />
     <Compile Include="Minions.cs" />
     <Compile Include="Program.cs" />

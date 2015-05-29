@@ -30,6 +30,11 @@ namespace TestName
         // Current state of the game
         private GameState state;
 
+        // Aspect ratio (height / width)
+        private float aspectRatio;
+
+        Vector2 squarePosition = Vector2.Zero;
+
         public GameMode() : base()
         {
             Load += OnLoad;
@@ -49,10 +54,13 @@ namespace TestName
         private void OnLoad(object e, EventArgs sender)
         {
             VSync = VSyncMode.On;
-            // TODO: Loading code here
+            state = GameState.Intro;
+            WindowState = WindowState.Fullscreen;
+            WindowBorder = WindowBorder.Hidden;
             gameplayController = new GameplayController();
             minionController = new MinionController();
             towerController = new Tower_Controller();
+            environment = new Environment();
             canvas = new Canvas(Width, Height);
         }
 
@@ -60,6 +68,11 @@ namespace TestName
         {
             GL.Viewport(0, 0, Width, Height);
             canvas.Resize(Width, Height);
+            aspectRatio = (float) Height / Width;
+            GL.MatrixMode(MatrixMode.Projection);
+            GL.LoadIdentity();
+            if (aspectRatio > 1) GL.Ortho(-1, 1, -aspectRatio, aspectRatio, 0, 4);
+            else GL.Ortho(-1 / aspectRatio, 1 / aspectRatio, -1, 1, 0, 4);
         }
 
         private void OnUpdateFrame(object e, EventArgs sender)
@@ -69,14 +82,33 @@ namespace TestName
                 Exit();
             }
 
+            if (Keyboard[Key.Left])
+            {
+                squarePosition.X -= 0.01f;
+            }
+            if (Keyboard[Key.Right])
+            {
+                squarePosition.X += 0.01f;
+            }
+            if (Keyboard[Key.Down])
+            {
+                squarePosition.Y -= 0.01f;
+            }
+            if (Keyboard[Key.Up])
+            {
+                squarePosition.Y += 0.01f;
+            }
+
             // TODO: All game logic goes here
             switch (state)
             {
-                    case GameState.Intro:
+                case GameState.Intro:
+                    // TODO: initialization code here
                     break;
-                    case GameState.Play:
+                case GameState.Play:
+                    gameplayController.Update();
                     break;
-                    case GameState.GameOver:
+                case GameState.GameOver:
                     break;
             }
         }
@@ -84,14 +116,21 @@ namespace TestName
         private void OnRenderFrame(object e, EventArgs sender)
         {
             // TODO: All drawing code goes here
-
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
-
-            environment.Draw(canvas);
-
-
-
+            switch (state)
+            {
+                case GameState.Intro:
+                    GL.ClearColor(Color.Black);
+                    state = GameState.Play;
+                    break;
+                case GameState.Play:
+                    environment.Draw(canvas);
+                    canvas.DrawSqaure(squarePosition.X, squarePosition.Y, 0.25f, Color.BlueViolet);
+                    break;
+                case GameState.GameOver:
+                    break;
+            }
             SwapBuffers();
         }
 
