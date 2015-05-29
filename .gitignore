@@ -47,5 +47,6 @@ Temporary Items
 *.suo
 *.exe
 *.pdb
+.sou
 .exe
 .pdb
