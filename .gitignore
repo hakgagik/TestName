@@ -43,5 +43,9 @@ Temporary Items
 .apdisk
 
 
-# sou files
+# Solution files
 *.suo
+*.exe
+*.pdb
+.exe
+.pdb
