@@ -10,7 +10,7 @@ namespace TestName
 {
     class MinionController
     {
-        protected static Minions[] basicBaddies;
+        protected static Minions[] basicBaddies = null;
         public Minions[] getMinionData()
         {
             return basicBaddies;
