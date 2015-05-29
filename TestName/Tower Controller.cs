@@ -23,12 +23,13 @@ namespace TestName
         {
             Tower myTower = new Tower();
             Minions myMinion = new Minions();
+            float damage = 0;
             //damage selected enemy
             if (targetInRange(Minion) < 1)
             {
-                float damage = myMinion.getMinionHealth - myTower.power;
-                return damage;
-            }           
+                damage = myMinion.getMinionHealth() - myTower.power;
+            }
+            return damage;
         }
         
         public void addTower()
