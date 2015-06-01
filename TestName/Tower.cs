@@ -14,7 +14,7 @@ namespace TestName
         //Name of tower
         String name;
         //damage
-        public float power;        
+        public int power;        
         //Rate of attack
         public float attackSpeed;
         //Range
@@ -34,7 +34,7 @@ namespace TestName
 
         }
 
-        public Tower(String towerName, float towerPower, float towerAttackSpeed){
+        public Tower(String towerName, int towerPower, float towerAttackSpeed){
             name = towerName;
             power = towerPower;
             attackSpeed = towerAttackSpeed;

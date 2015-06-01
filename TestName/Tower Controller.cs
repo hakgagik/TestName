@@ -14,28 +14,35 @@ namespace TestName
         
         static Tower[] towers;
         Minions myMinion = new Minions();
-        public double targetInRange(Minions Minion)
+        public int TargetedMinion()
+        {
+            int minionElement = 0;
+            //Figure out how to specify a certain minion
+            minionElement = myMinion.TargetedMinion;
+            return minionElement;
+        }
+        public double TargetInRange(Minions Minion)
         {
             double distance = 0;
             for (int i = 0; i < towers.Length; i++)
                 distance = Math.Sqrt(
-                    (towers[0].position.X - myMinion.position.X) * 
-                    (towers[0].position.X - myMinion.position.X) +
-                    (towers[0].position.Y - myMinion.position.Y) * 
-                    (towers[0].position.Y - myMinion.position.Y));
+                    (towers[0].position.X - Minion.MinionPosition.X) *
+                    (towers[0].position.X - Minion.MinionPosition.X) +
+                    (towers[0].position.Y - Minion.MinionPosition.Y) *
+                    (towers[0].position.Y - Minion.MinionPosition.Y));
             return distance;
         }
-        public float CalculateDamage(Minions Minion, Tower tower)
+        public float CalculateDamage(Minions[] Minion)
         {
             Tower myTower = new Tower();
-            Minions myMinion = new Minions();
-            float damage = 0;
+            int remainingHealth = 0;
             //damage selected enemy
-            if (targetInRange(Minion) < 1)
+            if (TargetInRange(Minion[TargetedMinion()]) < 1)
             {
-                damage = myMinion.getMinionHealth() - myTower.power;
+                remainingHealth = Minion[TargetedMinion()].MinionHealth - myTower.power;
+                Minion[TargetedMinion()].MinionHealth = remainingHealth;
             }
-            return damage;
+            return remainingHealth;
         }
         public static void addTower()
         {

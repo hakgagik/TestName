@@ -21,3 +21,11 @@ C:\Users\Arigato\Documents\GitHub\TestName\TestName\bin\Debug\TestName.pdb
 C:\Users\Arigato\Documents\GitHub\TestName\TestName\bin\Debug\OpenTK.dll
 C:\Users\Arigato\Documents\GitHub\TestName\TestName\bin\Debug\OpenTK.xml
 C:\Users\Arigato\Documents\GitHub\TestName\TestName\obj\Debug\TestName.csprojResolveAssemblyReference.cache
+D:\Documents\Dropbox\GitHub\TestName\TestName\bin\Debug\TestName.exe.config
+D:\Documents\Dropbox\GitHub\TestName\TestName\obj\Debug\TestName.csprojResolveAssemblyReference.cache
+D:\Documents\Dropbox\GitHub\TestName\TestName\bin\Debug\TestName.exe
+D:\Documents\Dropbox\GitHub\TestName\TestName\bin\Debug\TestName.pdb
+D:\Documents\Dropbox\GitHub\TestName\TestName\bin\Debug\OpenTK.dll
+D:\Documents\Dropbox\GitHub\TestName\TestName\bin\Debug\OpenTK.xml
+D:\Documents\Dropbox\GitHub\TestName\TestName\obj\Debug\TestName.exe
+D:\Documents\Dropbox\GitHub\TestName\TestName\obj\Debug\TestName.pdb
